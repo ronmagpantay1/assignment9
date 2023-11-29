@@ -7,6 +7,7 @@ environment:
   sdk: ">=3.3.0-152.0.dev <4.0.0"
 
 dependencies:
+  carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
 
@@ -27,3 +28,4 @@ flutter:
     - assets/images/roc.jpg
     - assets/images/tame.jpg
     - assets/images/tyler.jpg
+    - assets/images/mac.jpg

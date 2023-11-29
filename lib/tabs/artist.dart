@@ -84,6 +84,7 @@ List<String> images = [
   'assets/images/ptv.jpg',
   'assets/images/roc.jpg',
   'assets/images/tame.jpg',
+  'assets/images/mac.jpg',
   'assets/images/tyler.jpg'
 ];
 
@@ -96,5 +97,6 @@ List<String> titles = [
   'Pierce The Veil',
   'Rex Orange County',
   'Tame Impala',
+  'Mac DeMarco',
   'Tyler The Creator'
 ];

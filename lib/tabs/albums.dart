@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class albumers extends StatefulWidget {
   const albumers({super.key});
@@ -10,9 +11,6 @@ class albumers extends StatefulWidget {
 }
 
 class _albumersState extends State<albumers> {
-  int currentIndex = 0;
-  PageController pageController = PageController();
-
   List<String> images = [
     'assets/images/arctic.jpg',
     'assets/images/atl.jpg',
@@ -22,6 +20,7 @@ class _albumersState extends State<albumers> {
     'assets/images/ptv.jpg',
     'assets/images/roc.jpg',
     'assets/images/tame.jpg',
+    'assets/images/mac.jpg',
     'assets/images/tyler.jpg'
   ];
 
@@ -34,43 +33,39 @@ class _albumersState extends State<albumers> {
     'Pierce The Veil',
     'Rex Orange County',
     'Tame Impala',
+    'Mac DeMarco',
     'Tyler The Creator'
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height / 2,
-          width: MediaQuery.of(context).size.width / 2,
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: PageView.builder(
-              controller: pageController,
-              itemCount: images.length,
-              onPageChanged: (index) {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              itemBuilder: (context, index) {
-                return Container(
+    return CarouselSlider(
+      options: CarouselOptions(
+          height: 350,
+          viewportFraction: 1,
+          enlargeCenterPage: true,
+          autoPlay: true,
+          autoPlayInterval: const Duration(seconds: 3)),
+      items: images.map((image) {
+        return Padding(
+          padding: const EdgeInsets.all(10),
+          child: Stack(
+            children: [
+              Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                          image: AssetImage(images[index]), fit: BoxFit.cover)),
-                );
-              },
-            ),
+                          image: AssetImage(image), fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(0))),
+              Positioned(
+                  bottom: 0,
+                  child: Text(
+                    titles[images.indexOf(image)],
+                    style: const TextStyle(color: Colors.white),
+                  ))
+            ],
           ),
-        ),
-        Text(
-          titles[currentIndex],
-          style: const TextStyle(color: Color.fromARGB(255, 255, 209, 209)),
-        )
-      ],
+        );
+      }).toList(),
     );
   }
 }
