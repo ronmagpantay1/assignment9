@@ -34,9 +34,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: isLoading ? const HomScreen() : const homie(),
+    return Theme(
+      data: ThemeData(primarySwatch: Colors.red),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: isLoading ? const HomScreen() : const homie(),
+      ),
     );
   }
 }

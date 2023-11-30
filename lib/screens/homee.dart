@@ -13,25 +13,35 @@ class homie extends StatefulWidget {
 }
 
 class _homieState extends State<homie> {
+  static MaterialColor colorTab = Colors.red;
+  static Color colorTab2 = Colors.black;
+
   @override
   Widget build(BuildContext context) {
-    // INSERT CODE HERE!!!!
-    // Hint: You need to use the following widgets
-    // DefaultTabController, TabBar, Tab and TabBarView
-
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 3,
       child: Scaffold(
         bottomNavigationBar: TabBar(
           tabs: [
-            Tab(icon: Icon(Icons.account_circle), text: "Favorite Songs"),
-            Tab(icon: Icon(Icons.favorite), text: "Top Artist"),
-            Tab(icon: Icon(Icons.groups), text: "Most Stream Albums"),
+            Tab(
+                icon: Icon(
+                  Icons.favorite,
+                  color: colorTab,
+                ),
+                text: "Favorite Song"),
+            Tab(
+                icon: Icon(Icons.account_circle, color: colorTab),
+                text: "Top Artist"),
+            Tab(
+                icon: Icon(Icons.album, color: colorTab),
+                text: "Most Stream Albums"),
           ],
+          indicatorColor: colorTab,
+          unselectedLabelColor: colorTab2,
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
-            songers(),
+            HomeScreen(),
             artisters(),
             albumers(),
           ],

@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
@@ -31,5 +32,11 @@ flutter:
     - assets/images/tame.jpg
     - assets/images/tyler.jpg
     - assets/images/mac.jpg
+    - assets/images/
     - assets/songs/
     - assets/icons/
+    - assets/fonts/
+  fonts:
+    - family: ZenDots-Regular
+      fonts:
+        - asset: assets/fonts/ZenDots-Regular.ttf

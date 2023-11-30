@@ -85,7 +85,12 @@ List<String> images = [
   'assets/images/roc.jpg',
   'assets/images/tame.jpg',
   'assets/images/mac.jpg',
-  'assets/images/tyler.jpg'
+  'assets/images/tyler.jpg',
+  'assets/images/cas.jpg',
+  'assets/images/gorillaz.jpg',
+  'assets/images/linkin.jpg',
+  'assets/images/mcr.jpg',
+  'assets/images/steve.jpg'
 ];
 
 List<String> titles = [
@@ -98,5 +103,10 @@ List<String> titles = [
   'Rex Orange County',
   'Tame Impala',
   'Mac DeMarco',
-  'Tyler The Creator'
+  'Tyler The Creator',
+  'Cigarettes After S*x',
+  'Gorillaz',
+  'Linkin Parl',
+  'My Chemical Romance',
+  'Steve Lacey'
 ];

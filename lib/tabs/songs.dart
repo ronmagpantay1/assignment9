@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future initPlayer() async {
     player = AudioPlayer();
-    path = AssetSource('songs/ukulele.mp3');
+    path = AssetSource('songs/inbloom.mp3');
 
     // set a callback for changing duration
     player.onDurationChanged.listen((Duration d) {
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const AudioInfo(),
-            const SizedBox(height: 50),
+            const SizedBox(height: 5),
             Slider(
               value: _position.inSeconds.toDouble(),
               onChanged: (value) async {
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(_duration.format()),
               ],
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -98,24 +98,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     player.seek(Duration(seconds: _position.inSeconds - 10));
                     setState(() {});
                   },
-                  child: Image.asset('assets/icons/rewind.png'),
+                  child: Image.asset(
+                    'assets/icons/rewind.png',
+                    width: 50,
+                  ),
                 ),
-                const SizedBox(width: 20),
+                const SizedBox(width: 5),
                 InkWell(
                   onTap: playPause,
                   child: Icon(
                     isPlaying ? Icons.pause_circle : Icons.play_circle,
                     color: Colors.red,
-                    size: 100,
+                    size: 50,
                   ),
                 ),
-                const SizedBox(width: 20),
+                const SizedBox(width: 5),
                 InkWell(
                   onTap: () {
                     player.seek(Duration(seconds: _position.inSeconds + 10));
                     setState(() {});
                   },
-                  child: Image.asset('assets/icons/forward.png'),
+                  child: Image.asset(
+                    'assets/icons/forward.png',
+                    width: 50,
+                  ),
                 ),
               ],
             ),

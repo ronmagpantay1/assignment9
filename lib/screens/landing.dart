@@ -13,7 +13,7 @@ class HomScreen extends StatelessWidget {
           children: [
             Text("Ron's Personal Music Library"),
             SizedBox(height: 40),
-            CircularProgressIndicator(),
+            CircularProgressIndicator(color: Colors.red,),
           ],
         ),
       ),
