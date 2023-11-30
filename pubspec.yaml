@@ -8,6 +8,8 @@ environment:
 
 dependencies:
   carousel_slider: ^4.2.1
+  audioplayers: ^4.0.1
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
 
@@ -29,3 +31,5 @@ flutter:
     - assets/images/tame.jpg
     - assets/images/tyler.jpg
     - assets/images/mac.jpg
+    - assets/songs/
+    - assets/icons/
