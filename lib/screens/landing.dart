@@ -5,15 +5,24 @@ class HomScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Ron's Personal Music Library"),
-            SizedBox(height: 40),
-            CircularProgressIndicator(color: Colors.red,),
+            Image.asset(
+              'assets/images/giphy.gif',
+              width: 50,
+            ),
+            const Text(
+              "Ron's Personal Music Library",
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(height: 40),
+            const CircularProgressIndicator(
+              color: Colors.red,
+            ),
           ],
         ),
       ),

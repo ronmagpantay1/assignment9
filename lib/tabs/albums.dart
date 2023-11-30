@@ -25,7 +25,7 @@ class _albumersState extends State<albumers> {
 
   List<String> titles = [
     'All Distortions Are International',
-    'After Horus',
+    'After Hours',
     'The Black Parade',
     'Currents',
     'Double Dare',
@@ -67,7 +67,10 @@ class _albumersState extends State<albumers> {
             padding: const EdgeInsets.all(10),
             child: Text(
               titles[index],
-              style: const TextStyle(color: Colors.white),
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
           ),
         );

@@ -32,11 +32,12 @@ flutter:
     - assets/images/tame.jpg
     - assets/images/tyler.jpg
     - assets/images/mac.jpg
+    - assets/images/giphy.gif
     - assets/images/
     - assets/songs/
     - assets/icons/
     - assets/fonts/
   fonts:
-    - family: ZenDots-Regular
+    - family: Poppins-Black
       fonts:
-        - asset: assets/fonts/ZenDots-Regular.ttf
+        - asset: assets/fonts/Poppins-Black.ttf

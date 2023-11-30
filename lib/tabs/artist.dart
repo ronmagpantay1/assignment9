@@ -56,10 +56,14 @@ class _ImageItemState extends State<ImageItem> {
           ),
           Positioned(
             bottom: 0,
-            child: Text(
-              widget.title,
-              style: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.bold),
+            child: Center(
+              child: Text(
+                widget.title,
+                style: const TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
             ),
           )
         ],

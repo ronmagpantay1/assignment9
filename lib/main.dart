@@ -17,7 +17,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool isLoading = true;
-
   @override
   void initState() {
     super.initState();
@@ -35,7 +34,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(primarySwatch: Colors.red),
+      data: ThemeData(primarySwatch: Colors.red, fontFamily: "Poppins-Black"),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: isLoading ? const HomScreen() : const homie(),
