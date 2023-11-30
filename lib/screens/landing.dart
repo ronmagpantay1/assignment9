@@ -13,7 +13,7 @@ class HomScreen extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/giphy.gif',
-              width: 50,
+              width: 300,
             ),
             const Text(
               "Ron's Personal Music Library",
